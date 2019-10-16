@@ -1,12 +1,13 @@
 pipeline {
-  agent {
-    docker {
-      image 'node:8'
-    }
-
-  }
+  agent any
   stages {
     stage('prova') {
+      agent {
+        docker {
+          image 'nvm:8'
+        }
+
+      }
       steps {
         sh 'npm install'
       }
