@@ -4,7 +4,7 @@ pipeline {
     stage('prova') {
       agent {
         docker {
-          image 'nvm:8'
+          image 'node:8'
         }
 
       }
