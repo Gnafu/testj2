@@ -10,6 +10,7 @@ pipeline {
       }
       steps {
         sh 'npm install'
+        sh 'echo "beda" > beda.txt'
       }
     }
     stage('test') {
@@ -21,6 +22,7 @@ pipeline {
       }
       steps {
         sh 'mvn --version'
+        sh 'cat beda.txt'
       }
     }
   }
